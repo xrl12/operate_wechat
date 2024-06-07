@@ -1,21 +1,32 @@
 {
   "name": "operate_wechat",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "version": "0.0.0",
+  "main": "electron/main.js",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "electron:dev": "concurrently \"yarn dev\" \"yarn electron\"",
+    "electron": "wait-on http://192.168.101.12:3000/ && electron ."
   },
   "dependencies": {
+    "concurrently": "^8.2.2",
     "electron": "^30.1.0",
-    "vue": "^3.4.21"
+    "element-plus": "^2.7.5",
+    "node-sass": "^9.0.0",
+    "sass": "^1.77.4",
+    "ts-node": "^10.9.2",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.2",
+    "wechat4u": "^0.7.14"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
-    "vue-tsc": "^2.0.6"
+    "vue-tsc": "^2.0.6",
+    "wait-on": "^7.2.0"
   }
 }
