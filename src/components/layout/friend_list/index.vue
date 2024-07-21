@@ -1,14 +1,6 @@
 <template>
-  <div class="friend_list">
-    first_list
-  </div>
-
+  <div class="friend_list">friend_list</div>
 </template>
-<script setup lang="ts">
+<script setup lang="ts"></script>
 
-</script>
-
-
-<style scoped>
-
-</style>
+<style scoped lang="scss"></style>

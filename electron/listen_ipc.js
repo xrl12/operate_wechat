@@ -4,6 +4,7 @@ import wechat_utils from "./utils/wechat/index.js";
 export default (mainWindow) => {
     ipcMain.on('change-window-size', (_, option) => {
         if (mainWindow) {
+            console.log(option, 'option')
             mainWindow.setSize(option.width, option.height);
         } else {
             console.error('没有找到窗口')
